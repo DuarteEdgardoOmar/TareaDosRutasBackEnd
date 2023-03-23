@@ -8,7 +8,7 @@ const {userSaludoCB , userAltaCB} = require('../controllers/userController')
 //respuessta=>http://localhost:3000/user/saludo:Omar/Duarte
 routerUser.get('/saludo:nombre/:apellido', userSaludoCB)
 
-
+//http://localhost:3000/user/usuarioNuevo
 routerUser.post('/usuarioNuevo', userAltaCB)
 
 module.exports = routerUser
