@@ -1,5 +1,6 @@
 let express = require('express')
 let app = express()
+const {connect} = require('./dataBase/db.js')
 
 const user = require ('./routes/user')
 const maths = require ('./routes/maths')
@@ -12,6 +13,8 @@ app.use('/user',user)
 app.use('/maths', maths)
 app.use('/list',list)
 
+/**se ejecuta la funcion de conexion a la bd que esta en el archivo database/db.js */
+connect()
 
 module.exports = app
 
